@@ -1,0 +1,19 @@
+{
+  "name": "evaluate-news-article",
+  "version": "1.0.0",
+  "description": "This app for evaluation a News article",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bayoumi-dev/evaluate-news-article.git"
+  },
+  "author": "Bayoumi-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bayoumi-dev/evaluate-news-article/issues"
+  },
+  "homepage": "https://github.com/Bayoumi-dev/evaluate-news-article#readme"
+}
