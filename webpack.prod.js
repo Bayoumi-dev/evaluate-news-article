@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -49,6 +50,10 @@ module.exports = {
       inject: "body",
     }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+    }),
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
