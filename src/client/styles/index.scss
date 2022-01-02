@@ -1,0 +1,12 @@
+@use "./base/reset.scss";
+@use "./abstracts/index.scss" as *;
+@use "./pages/index.scss";
+
+html {
+  scroll-behavior: smooth;
+  font-family: $font-family;
+  line-height: 1.3;
+}
+body {
+}
+

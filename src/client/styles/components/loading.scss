@@ -1,0 +1,25 @@
+@use '../abstracts/index.scss' as *;
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    span {
+      width: 20px;
+      height: 20px;
+      background-color: $orange;
+      margin: 0 5px;
+      border-radius: 50%;
+      animation: animate 0.9s infinite alternate;
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      &:last-child {
+        animation-delay: 0.6s;
+      }
+    }
+  }
+  @keyframes animate {
+    to {
+      opacity: 0.2;
+    }
+  }

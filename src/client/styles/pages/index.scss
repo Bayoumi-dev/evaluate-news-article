@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+@use "../layout" as *;
+
+@use "../components/form.scss";
+@use "../components/result.scss";
+@use "../components/loading.scss";
+
+main {
+  min-height: calc(100vh - 110px);
+  padding-top: 50px;
+  .container {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      margin: auto auto 20px;
+      font-size: 2.2rem;
+      color: $dark;
+      span {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        color: #666565;
+      }
+    }
+  }
+}
