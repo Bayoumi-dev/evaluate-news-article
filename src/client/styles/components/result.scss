@@ -1,0 +1,26 @@
+#result-sec {
+    margin-top: 40px;
+    table {
+      th {
+        font-size: 1.05rem;
+        padding-bottom: 5px;
+      }
+      tr {
+        font-size: 0.8rem;
+        td {
+          &:nth-child(2) {
+            font-size: 0.7rem;
+            color: #666565;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-size: 0.7rem;
+      color: #919191;
+      position: relative;
+      top: -35px;
+    }
+  }

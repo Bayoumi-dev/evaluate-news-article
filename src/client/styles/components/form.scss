@@ -1,0 +1,98 @@
+@use "../abstracts/index.scss" as *;
+
+section {
+  position: relative;
+  &.analysis-sentiment {
+    form {
+      width: 100%;
+      display: flex;
+      font-size: 0.8rem;
+      & > * {
+        border: none;
+        outline: none;
+        padding: 10px 25px;
+      }
+      input {
+        &#article-url {
+          background-color: #fcfcfc;
+          width: 100%;
+          margin-right: 10px;
+          border: 0px solid #231f2063 {
+            radius: 0.5em;
+          }
+          caret-color: $orange;
+          box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.103);
+          &:focus {
+            box-shadow: 0 4px 8px 0 #00000031, 0 4px 8px 0 #{$orange}10;
+          }
+          &::placeholder {
+            color: #{$dark}80 !important;
+          }
+        }
+        &[type="submit"] {
+          color: inherit;
+          cursor: pointer;
+          background-color: #{$orange}f2;
+          font-size: 0.8rem;
+          color: $white;
+          border-radius: 0.5em;
+          &:hover {
+            background-color: $orange;
+            box-shadow: 0 6px 20px 0 #b3400b23;
+          }
+        }
+      }
+    }
+  }
+  #error {
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+    span {
+      color: $error;
+      background-color: $dark;
+      display: block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #fcfcfc;
+      padding: 10px 15px 10px 27px;
+      border-radius: 0.5em;
+      position: relative;
+      width: fit-content;
+      animation: hide-error 0.3s forwards 2s;
+      &::before {
+        content: "";
+        background: url(../images/error.svg) no-repeat;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        animation: error-attention 1s forwards;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border: 5px solid transparent {
+          bottom-color: $dark;
+        }
+      }
+    }
+  }
+  @keyframes error-attention {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes hide-error {
+    to {
+      opacity: 0;
+    }
+  }
+}

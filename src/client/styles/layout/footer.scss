@@ -1,0 +1,62 @@
+@use "../abstracts/index.scss" as *;
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  height: 60px;
+  .container {
+    @extend %align-center;
+    padding: 5px 0;
+    .me {
+      font-size: 0.8rem;
+      color: $dark;
+      margin-right: 10px;
+    }
+  }
+  ul {
+    @extend %align-center;
+    li {
+      a {
+        @extend %align-center;
+        padding: 5px 6px;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+      &:not(&:last-of-type) {
+        margin-right: 2px;
+      }
+    }
+  } // Footer Responsive
+  @media (max-width: 576px) {
+    & {
+      .container {
+        justify-content: center;
+      }
+    }
+  }
+}
+// Social media icons
+$socials: "github" #9da7b2, "instagram" #c32aa3, "linkedin" #0a66c2;
+
+@each $name, $color in $socials {
+  .#{$name} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include circle(30px);
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #{$color}40;
+    }
+    span {
+      background: url(../images/#{$name}.svg) no-repeat {
+        size: cover;
+      }
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/index.scss' as *;
+header {
+    background-color: $dark;
+    .container {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 77px;
+        height: 33px;
+        background: url(../images/logo.svg) no-repeat;
+        cursor: pointer;
+      }
+    }
+  }
