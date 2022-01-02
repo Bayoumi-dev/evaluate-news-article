@@ -4,7 +4,8 @@
   "description": "This app for evaluation a News article",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Bayoumi-dev/evaluate-news-article/issues"
   },
-  "homepage": "https://github.com/Bayoumi-dev/evaluate-news-article#readme"
+  "homepage": "https://github.com/Bayoumi-dev/evaluate-news-article#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "node-fetch": "^2.6.6"
+  }
 }
