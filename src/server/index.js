@@ -39,7 +39,7 @@ app.post("/sentiment-analysis", async function (req, res) {
 });
 
 // Spin up the server
-const port = 30031;
+const port = 3001;
 app.listen(port, function () {
   console.log(`Listening on port: ${port}`);
 });
